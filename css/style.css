@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --bg--color: #333333;
+    --text--color: #fff;
+    --black: #000000;
+    --white: #fff;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #f9f7f1 0%, #e8ded1 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 30px 15px 15px;
+    background: var(--bg--color);
+    backdrop-filter: blur(8px);
+    border-bottom: 6px solid var(--black);
+}
+
+header h1 {
+    font-size: 30px;
+    color: var(--text--color);
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 17px;
+    color: var(--text--color);
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* Area de formulario */
+.form-area {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+select {
+    padding: 10px 14px;
+    border: 1px solid #c2a3a3;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: var(--white);
+    color: #333;
+    min-width: 220px;
+    transition: 0.3s;
+}
+
+select:focus {
+    outline: none;
+    border-color: #a68560;
+    box-shadow: 0 0 6px rgb(166, 133, 96, 0.3);
+
+}
+
+button {
+    padding: 10px 18px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #8b5e3c, #b47b54);
+    color: var(--text--color);
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #70482b, #a0633c);
+    transform: scale(1.05);
+}
+
+/* Resultados */
+.livros-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.livro {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    width: auto;
+    box-shadow: 0 6px 15px rgb(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.livro:hover {
+    transition: translateY(-5px);
+}
+
+.livro img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.livro h3 {
+    font-size: 18px;
+    color: #4a342e;
+    margin: 10px 0 5px;
+}
+
+.livro p {
+    font-size: 15px;
+    color: #666;
+    padding-bottom: 10px;
+}
+
+/* Rodaepe */
+footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 15px;
+    background: rgb(255, 255, 255, 0.6);
+    border-top: 1px solid #d4c4b0;
+    color: #4a342e;
+}
+
+footer a {
+    color: #8b5e3c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width:768px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    button,
+    select {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 15px;
+    }
+
+    header p {
+        font-size: 10px;
+    }
+
+    .livro h3 {
+        font-size: 16px;
+
+    }
+
+    .livro p {
+        font-size: 13px;
+
+    }
+}

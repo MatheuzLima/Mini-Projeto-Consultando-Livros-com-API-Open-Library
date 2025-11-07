@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-projeto Open Library Interativo</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>📚 Buscador de Livros por ISBN</h1>
+        <p>Consulta atraves da API: </p>
+    </header>
+
+    <main class="container">
+        <div class="form-area">
+            <select id="isbnSelect">
+                <option value="">Selecione um livro</option>
+                <option value="0451450523">The Last unicornio</option>
+                <option value="9780140328721">Fantastic Mr. Fox</option>
+                <option value="9780439023528">Hunger Games</option>
+                <option value="9780061120084">To Kill a Mockingbird</option>
+            </select>
+            <button id="buscarBtn">Buscar</button>
+        </div>
+
+        <section id="livros" class="livros-container"></section>
+    </main>
+
+
+    <footer>
+        <p>Desenvolvimento de estudo Matheus Lima | Dados via <a href="https://openlibrary.org" target="_blank">Open
+                Library</a></p>
+    </footer>
+</body>
+<script src="/script/script.js"></script>
+
+</html>
+
+
+
+
+
+
+
